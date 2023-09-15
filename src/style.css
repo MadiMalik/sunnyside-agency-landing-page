@@ -1,0 +1,618 @@
+:root{
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --cyan-400: hsl(167, 40%, 24%);
+  --cyan-300: hsl(168, 34%, 41%);
+  --Dark-blue: hsl(198, 62%, 26%);
+
+  --grayish-400: hsl(212, 27%, 19%);
+  --grayish-300: hsl(213, 9%, 39%);
+  --grayish-200: hsl(232, 10%, 55%);
+  --grayish-100: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  --ff-b:'Barlow', sans-serif;
+  --ff-f: 'Fraunces', serif;
+  --fw-600:600;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+
+/* Box Model Hack */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: var(--ff-b);
+  font-weight: var(--fw-600);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4{
+  font-family: var(--ff-f);
+}
+
+img{
+  max-width: 100%;
+}
+
+h1{
+  color: var(--white);
+  font-weight: var(--fw-900);
+  font-size: 4.1rem;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+
+h2{
+  color: var(--grayish-400);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: var(--fw-900);
+}
+
+p{
+  color: var(--grayish-200);
+}
+
+ul li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+.wrapper{
+  margin: 0 auto;
+  border: 2px solid gray;
+}
+
+
+.flex{
+  display: flex;
+}
+
+.btn{
+  font-family: var(--ff-f);
+  font-weight: var(--fw-900);
+  border: none;
+  background: transparent;
+  /* border-bottom: 1rem solid  hsl(51, 100%, 76%); */
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+
+.btn a{
+  color: var(--grayish-400);
+  
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.header{
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2.7rem;
+}
+
+.navbar{
+  position: relative;
+
+}
+
+.nav-list{
+  position:fixed;
+  width: 86%;
+  height: 55vh;
+  top: 13rem;
+  right: 2.9rem;
+
+  transition: all 1s;
+
+  flex-direction: column;
+  background: var(--white);
+  justify-content: center;
+  align-items: center;
+  /* padding: 2rem 9.5rem; */
+}
+
+
+.hidden{
+  display: none;
+}
+
+.nav-list .nav-arrow{
+  position: fixed;
+  top: 6rem;
+  right:-1.05rem;
+  clip-path: polygon(59% 17%, 0% 100%, 61% 100%);
+  width: 5rem;
+  height: 5rem;
+  background: var(--white);
+}
+.nav-list li{
+  margin: 2rem;
+}
+
+.nav-list .contact{
+  padding: 1.5rem 4rem;
+  border-radius: 20rem;
+  background-color: var(--Yellow);
+  color: var(--Dark-blue);
+}
+
+.nav-list .contact a{
+  color: var(--Dark-blue);
+}
+
+
+.nav-list a{
+  color: var(--grayish-200);
+}
+
+.menu-icon img{
+  width: 3rem;
+}
+
+main{
+  background-image: url(images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.main-content{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7rem;
+  text-align: center;
+}
+
+.arrow-icon-box{
+  width: 100%;
+  margin-top: 2.6rem;
+}
+
+/******************************************
+/* TRANSFORM AND STAND OUT STYLES
+/*******************************************/
+
+.sections{
+  background: white;
+  flex-direction: column;
+}
+
+.transform-sec-content,
+.stand-out-content{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 9rem 3rem;
+}
+
+.transform-sec-content p,
+.stand-out-content p{
+  line-height: 1.5;
+  margin-top: 3.5rem;
+}
+
+/******************************************
+/* GRAPGHIC AND PHOTOGRAGHY STYLES
+/*******************************************/
+
+.graphic-and-photography-sec{
+  flex-direction: column;
+}
+
+.graphic-sec{
+  background-image: url(images/mobile/image-graphic-design.jpg);
+}
+
+.photography-sec{
+  background-image: url(images/mobile/image-photography.jpg);
+}
+
+.graphic-sec,
+.photography-sec{
+  text-align: center;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 49rem 2.4rem 10rem 2.4rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 3rem;
+  line-height: 1.6;
+}
+
+.graphic-sec h2,
+.graphic-sec p{
+  color: var(--cyan-400);
+}
+
+
+.photography-sec h2,
+.photography-sec p{
+  color: var(--Dark-blue);
+}
+
+/******************************************
+/* TESTIMOIALS STYLES
+/*******************************************/
+.testimonials-sec{
+  text-align: center;
+
+}
+
+.testimonials-sec h2{
+  margin-top: 12rem;
+  color: var(--grayish-100);
+  font-size: 2.5rem;
+
+}
+
+.testimonial-box{
+  flex-direction: column;
+  padding: 7rem 6rem;
+  gap: 6rem;
+}
+
+.testimonial p{
+  line-height: 1.7;
+}
+
+.testimonial .user-name{
+  margin: 1.1rem 0;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.testimonial .user-title{
+  color: var(--grayish-100);
+  font-size: 1.5rem;
+
+}
+
+.testimonial img{
+  border-radius: 50%;
+  width: 7.9rem;
+}
+
+.testimonial p{
+  margin: 4rem 0;
+}
+
+/******************************************
+/* GALLERY SEC STYLES
+/*******************************************/
+.gallery-sec {
+  flex-wrap: wrap;
+}
+
+
+.gallery-img{
+  width: 50%;
+
+}
+
+/******************************************
+/* FOOTER STYLES
+/*******************************************/
+
+footer{
+  background: #91D3C5;
+  padding: 6.7rem;
+  color: var(--cyan-300);
+  text-align: center;
+}
+
+footer h3{
+  color: var(--cyan-400);
+  font-size: 4.2rem;
+  font-weight: var(--fw-900);
+}
+
+.content-list{
+  align-items: center;
+  justify-content: center;
+  padding-block: 4.6rem;
+  font-size: 2rem;
+  gap: 8rem;
+}
+.content-list .items{
+  cursor: pointer;
+  transition: 0.44s;
+}
+
+.content-list .items:hover{
+  color: var(--white);
+}
+
+
+.contact-list{
+  align-items: center;
+  justify-content: center;
+  gap: 3.4rem;
+  margin-top: 3.5rem;
+}
+
+.contact-list .items img{
+  width: 2.5rem;
+  cursor: pointer;
+  transition: 0.44s;
+}
+
+.contact-list .items img:hover{
+  fill: #fff;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.sections .btn{
+  box-shadow: inset 0px 18px 0px -4px  rgba(255,255,186,0.87);
+  margin-top: 5rem;
+}
+
+
+/******************************************
+/* TABLET STYLES
+/*******************************************/
+@media (min-width: 700px){
+  .wrapper{
+    width: 100%;
+  }
+
+  main{
+    height: 100vh;
+    background-image: url('images/desktop/image-header.jpg');
+    background-position:center; 
+    background-repeat: no-repeat; 
+
+  }
+
+  .header{
+    padding-left: 3rem ;
+    padding-right: 3rem ;
+  }
+
+  .navbar{
+    position:static;
+  }
+  .nav-list-box{
+    display: block;
+  }
+
+  .nav-list{
+    height: 8vh;
+    padding: 0;
+    position:static;
+    flex-direction: row;
+    background: transparent;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .nav-list .nav-arrow{
+    display: none;
+  }
+  .nav-list li{
+    margin: 0;
+  }
+
+  .nav-list a{
+    color: var(--white);
+  }
+
+  .nav-list .contact{
+    background-color: var(--white);
+  }
+  .nav-list .contact a{
+    color: var(--Dark-blue);
+  }
+  
+  .menu-icon{
+    display: none;
+  }
+  .sections{
+    flex-direction:column;
+  }
+  .transform-img,
+  .stand-out-img{
+    width: 100%;
+  }
+
+/******************************************
+/* TRANSFORM AND STAND OUT STYLES
+/*******************************************/
+
+.sections,
+.graphic-and-photography-sec{
+  flex-direction: row;
+}
+
+.transform-img,
+.stand-out-img{
+  width: 50%;
+}
+
+.transform-img{
+  order: 1;
+}
+
+.transform-img img,
+.stand-out-img img{
+  width:100%;
+}
+
+.transform-sec-content,
+.stand-out-content{
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  text-align: left;
+  padding: 3rem 4rem;
+}
+
+.transform-sec-content h2,
+.stand-out-content h2{
+ font-size: 3rem;
+}
+
+.transform-sec-content p,
+.stand-out-content p{
+ margin-top: 2.6rem;
+ font-size: 1.6rem;
+}
+
+.sections .btn{
+  padding: 0 2rem;
+  margin-top: 2.9rem;
+  margin-left: 1rem;
+ 
+}
+
+  .graphic-sec{
+    background-image: url(images/desktop/image-graphic-design.jpg);
+  }
+  .photography-sec{
+    background-image: url(images/desktop/image-photography.jpg);
+  }
+  .graphic-sec,
+  .photography-sec{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 38rem 5rem 10rem 5rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3rem;
+    line-height: 1.6;
+}
+
+footer{
+  background: ;
+}
+
+
+/******************************************
+/* TESTIMOIALS STYLES
+/*******************************************/
+.testimonial-box{
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding: 11rem 6rem;
+  gap: 2rem;
+}
+
+.testimonials{
+  flex-shrink: 1;
+}
+
+}
+
+/******************************************
+/* DESKTOP STYLES
+/*******************************************/
+@media (min-width: 1040px){
+
+/******************************************
+/* TRANSFORM AND STAND OUT STYLES
+/*******************************************/
+  h2{
+    font-size: 4rem;
+  }
+
+  .transform-sec-content,
+  .stand-out-content{
+    padding: 0 10rem;
+  }
+
+
+  .transform-sec-content h2,
+  .stand-out-content h2{
+    font-size: 4rem;
+  }
+
+  .transform-sec-content p,
+  .stand-out-content p{
+    margin-top: 2.6rem;
+    font-size: 1.8rem;
+  }
+
+.sections .btn{
+  padding: 0 2rem;
+  margin-top: 2.9rem;
+  margin-left: 1rem;
+ 
+}
+
+  .sections .btn{
+    padding: 0 2rem;
+    margin-top: 6rem;
+    margin-left: 1rem;
+   
+  }
+  .graphic-sec,
+  .photography-sec{
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3rem;
+    line-height: 1.6;
+
+} 
+
+.testimonial-box{
+  padding: 11rem 13rem;
+  gap: 2rem;
+}
+
+.gallery-img{
+  width: 25%; 
+}
+
+
+}
+
+@media(min-width: 1500px){
+  .wrapper{
+    max-width: 1500px;
+  }
+}
