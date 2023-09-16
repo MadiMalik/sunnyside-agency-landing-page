@@ -104,17 +104,18 @@ a{
 .btn{
   font-family: var(--ff-f);
   font-weight: var(--fw-900);
+  color: var(--grayish-400);
   border: none;
   background: transparent;
-  /* border-bottom: 1rem solid  hsl(51, 100%, 76%); */
   text-transform: uppercase;
   margin-top: 3rem;
+  cursor: pointer;
 }
 
-.btn a{
-  color: var(--grayish-400);
-  
+.btn{
+  cursor: pointer;
 }
+
 
 /******************************************
 /* LAYOUT
@@ -136,14 +137,11 @@ a{
   height: 55vh;
   top: 13rem;
   right: 2.9rem;
-
   transition: all 1s;
-
   flex-direction: column;
   background: var(--white);
   justify-content: center;
   align-items: center;
-  /* padding: 2rem 9.5rem; */
 }
 
 
@@ -170,6 +168,8 @@ a{
   background-color: var(--Yellow);
   color: var(--Dark-blue);
 }
+
+
 
 .nav-list .contact a{
   color: var(--Dark-blue);
@@ -398,6 +398,7 @@ footer h3{
 
   main{
     height: 100vh;
+    max-height: 57rem;
     background-image: url('images/desktop/image-header.jpg');
     background-position:center; 
     background-repeat: no-repeat; 
@@ -440,8 +441,18 @@ footer h3{
   .nav-list .contact{
     background-color: var(--white);
   }
+
+  .nav-list .contact:hover{
+    background-color: rgba(255, 255, 255, 0.35);
+    color: var(--white);
+  }
+  
   .nav-list .contact a{
     color: var(--Dark-blue);
+  }
+
+  .nav-list .contact a:hover{
+    color: var(--white);
   }
   
   .menu-icon{
@@ -545,6 +556,7 @@ footer{
   flex-shrink: 1;
 }
 
+
 }
 
 /******************************************
@@ -599,9 +611,15 @@ footer{
 } 
 
 .testimonial-box{
-  padding: 11rem 13rem;
-  gap: 2rem;
+  padding: 11rem 12rem;
+  gap: 3rem;
 }
+
+.testimonial{
+  padding: 2rem 0.6rem;
+  width:33%;
+}
+
 
 .gallery-img{
   width: 25%; 
