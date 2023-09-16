@@ -403,7 +403,7 @@ footer h3{
 
   main{
     height: 100vh;
-    max-height: 60rem;
+    max-height: 67rem;
     background-image: url('images/desktop/image-header.jpg');
     background-position:center; 
     background-repeat: no-repeat; 
@@ -423,7 +423,7 @@ footer h3{
   }
 
   .nav-list{
-    height: 8vh;
+    height: 6rem;
     padding: 0;
     position:static;
     flex-direction: row;
