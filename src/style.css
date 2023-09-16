@@ -66,7 +66,7 @@ img{
 h1{
   color: var(--white);
   font-weight: var(--fw-900);
-  font-size: 4.1rem;
+  font-size: 4.6rem;
   letter-spacing: 7px;
   text-transform: uppercase;
 }
@@ -163,7 +163,7 @@ a{
 }
 
 .nav-list .contact{
-  padding: 1.5rem 4rem;
+  padding: 1.4rem 3.7rem;
   border-radius: 20rem;
   background-color: var(--Yellow);
   color: var(--Dark-blue);
@@ -178,10 +178,15 @@ a{
 
 .nav-list a{
   color: var(--grayish-200);
+  font-size: 1.8rem;
 }
 
 .menu-icon img{
   width: 3rem;
+}
+
+.logo{
+  width: 14rem;
 }
 
 main{
